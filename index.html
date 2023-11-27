@@ -1,43 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <link rel="stylesheet" href="../style.css">
-  <title>Frontend Mentor | Order summary card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-<header>
-  <!-- <img src="./images/illustration-hero.svg" alt=""> -->
-</header>
-<div class="footer">
-  <h1>Order summary</h1>
 
-<p>
-  You can now listen to millions of songs, <br>audiobooks, and podcasts on <br> any 
-  device anywhere you like!
-</p>
-</div>
-  Annual Plan
-  $59.99/year
+  <div class="container">
 
-  Change
+    <div class="section_1">
 
-  Proceed to Payment
-  Cancel Order
-  
+      <div class="section_top">
+        <div class="err">
+        <span>Bill</span>
+        <span class="error_msg1">can't be zero</span>
+        </div>
+        <input type="text" class="amountInput" placeholder="0" id="bill">
+      </div>
+
+      <div class="section_middle">
+        <span>Select Tip%</span>
+        <div class="percent">
+          <button class="grid" value="5" onclick="tipValue(this)">5%</button>
+          <button class="grid" value="10" onclick="tipValue(this)">10%</button>
+          <button class="grid" value="15" onclick="tipValue(this)">15%</button>
+          <button class="grid" value="25" onclick="tipValue(this)">25%</button>
+          <button class="grid" value="50" onclick="tipValue(this)">50%</button>
+          <input class="grid" value="" placeholder="Custom" oninput="tipValue(this)">
+        </div>
+      </div>
+
+      <div class="section_bottom">
+        <div class="err">
+        <span>Number of People</span>
+        <span class="error_msg">can't be zero</span>
+        </div>
+        <input type="text" placeholder="0" class="amountInput" value="" id="bill_pp">
+      </div>
+    </div>
+
+    <div class="section_2">
+
+      <div class="sec2_top">
+        <div class="tipamount_pp">
+          <div class="classy">
+           <span class="detail">Tip Amount</span>
+           <br>
+           <span class="sub_detail">/person</span>
+          </div>
+          <div>
+            <span class="result1">0.00</span>
+          </div>
+        </div>
+        <div class="total_pp">
+          <div class="classy2">
+           <span class="detail">Total</span>
+           <br>
+           <span class="sub_detail">/person</span>
+          </div>
+          <div>
+            <span class="result2">0.00</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="reset_section">
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+  </div>
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="./script.js"></script>
 </body>
+
 </html>
